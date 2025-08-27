@@ -12,6 +12,14 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      // این قسمت را اضافه کنید
+      server: {
+        host: true // این برای اجرای dev روی 0.0.0.0 است
+      },
+      preview: {
+        host: true, // این باعث می شود preview هم روی 0.0.0.0 اجرا شود
+        port: 4173  // پورتی که vite preview استفاده می کند
       }
     };
 });
