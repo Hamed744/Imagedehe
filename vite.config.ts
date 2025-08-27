@@ -13,10 +13,13 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, '.'),
         }
       },
-      // این قسمت را برای حل مشکل اضافه کنید
+      // --- START OF CHANGES ---
       preview: {
         host: '0.0.0.0',
-        port: 10000 // پورت استاندارد برای Render
+        port: 10000,
+        // این خط دقیقا مشکل را حل می‌کند
+        allowedHosts: ['imagedehe-1.onrender.com']
       }
+      // --- END OF CHANGES ---
     };
 });
